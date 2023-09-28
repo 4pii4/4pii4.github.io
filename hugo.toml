@@ -15,7 +15,8 @@ theme = 'dark-theme-editor'
 
     # Obviously
     [params.header]
-        title = "pie's personal website"
+        title = "pieland"
+        subtitle = " "
     
     # I want to show these links only
     [params.footer]
@@ -24,8 +25,8 @@ theme = 'dark-theme-editor'
             discord = "pii4"
 
     [params.homePage]
-        siteLongDescription = "A collection of things I find intersting."
-        siteLongDescriptionTitle = ""
+        siteLongDescriptionTitle = " "
+        siteLongDescription = " "
 
         # When displaying the URL behind the title, it appears to be all messed up.
         recentPostShowUrl = false
