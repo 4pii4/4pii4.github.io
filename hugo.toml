@@ -1,0 +1,35 @@
+baseURL = 'https://pi.is-a.dev/'
+languageCode = 'en-us'
+title = "pie's personal website"
+theme = 'dark-theme-editor'
+
+
+[params]
+    # As I don't need to add any other JavaScript and CSS, I have removed the following items.
+    [params.site]
+        localCss = []
+        externalCss = []
+        localJs = []
+        externalJs = []
+        faviconUrl = "https://raw.githubusercontent.com/4pii4/random_files/main/favicon.png"
+
+    # Obviously
+    [params.header]
+        title = "pie's personal website"
+    
+    # I want to show these links only
+    [params.footer]
+        [params.footer.socialLink]
+            github = "https://github.com/4pii4"
+            discord = "pii4"
+
+    [params.homePage]
+        siteLongDescription = "A collection of things I find intersting."
+        siteLongDescriptionTitle = ""
+
+        # When displaying the URL behind the title, it appears to be all messed up.
+        recentPostShowUrl = false
+
+    [params.page]
+        # No, I don't want to show thw TOC in the demo site.
+        includeToc = false
