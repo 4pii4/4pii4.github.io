@@ -3,9 +3,7 @@ languageCode = 'en-us'
 title = "pie's personal website"
 theme = 'dark-theme-editor'
 
-
 [params]
-    # As I don't need to add any other JavaScript and CSS, I have removed the following items.
     [params.site]
         localCss = []
         externalCss = []
@@ -13,69 +11,33 @@ theme = 'dark-theme-editor'
         externalJs = []
         faviconUrl = "https://raw.githubusercontent.com/4pii4/random_files/main/favicon.png"
 
-    # Obviously
     [params.header]
         title = "pieland"
         subtitle = " "
 
-
     [params.homePage]
-        siteLongDescriptionTitle = " "
-        siteLongDescription = " "
-
-        # When displaying the URL behind the title, it appears to be all messed up.
+        siteLongDescriptionTitle = ""
+        siteLongDescription = ""
         recentPostShowUrl = false
 
     [params.page]
-        # No, I don't want to show thw TOC in the demo site.
         includeToc = false
 
     [params.globalFrontmatter]
-        # The author of this site. This will be shown in
-        # 1. the footer of all page
-        # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
-        # Keep it an empty string or remove this item will hide it from the page
         author = "pie"
-
-        # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
-        description = "Property of pieland"
-
-        # Website keywords. Theme will generate a <meta> tag for this item.
+        description = "there would be a description here but I can't think of any"
         keywords = "pie"
 
     [params.footer]
-        # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
         copyrightStr = ""
-
-        # Should show the counter in the footer or not
-        # In the home page, it will show the numbers of all pages
-        # In the sections pages, it will show the numbers of pages within the section
-        # In the taxonomy pages, it will show the numbers of pages belong to the taxonomy.
-        # In the regular content pages, it will show the word count.
         counter = false
-
-        # Should show the language of the page or not
         language = false
-
-        # Should show the hugo version or not
         hugoVersion = false
-
-        # Should show the theme info or not
         theme = false
-
-        # Should show the edited time of the page or not
         modifiedTime = false
-
-        # The format of the `modifiedTime`.
-        # Refer to page https://gohugo.io/functions/format/ for more detail.
-        # Below is the default format, please do not remove it, unless you set `false` in `modifiedTime` field.
         dateFormat = ""
-
-        # Should show the current git HEAD hash or not
-        # To make this show up correctly, please follow the prerequisites in page
-        # https://gohugo.io/variables/git/
         gitHash = false
 
         [params.footer.socialLink]
             github = "https://github.com/4pii4"
-            discord = "pii4"
+            discord = "https://discordapp.com/users/1018396405498396753"
