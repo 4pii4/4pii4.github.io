@@ -1,9 +1,8 @@
 ---
 title: "Hello world"
-date: 2023-05-10T23:47:51+08:00
+date: 2023-09-24
 author: "pie"
 tags: ["test"]
-# description: "Hello world."
 draft: false
 include_toc: false
 ---
