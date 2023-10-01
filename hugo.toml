@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = "pie's personal website"
 theme = 'dark-theme-editor'
 
+[markup.goldmark.renderer]
+    unsafe= true
+
 [params]
     [params.site]
         localCss = []
