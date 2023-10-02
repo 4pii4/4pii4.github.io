@@ -1,0 +1,116 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{ hugo.Generator }}
+
+    {{ with $.Site.Params.site.googleVerification }}
+        <meta name="google-site-verification" content="{{ . }}" />
+    {{ end }}
+
+    {{ with $.Site.Params.site.bingVerifivation }}
+        <meta name="msvalidate.01" content="{{ . }}" />
+    {{ end }}
+
+    {{ if $.IsPage }}
+        {{ if isset $.Params "description" }}
+            <meta name="description" content="{{ $.Params.description }}" />
+        {{ else if isset $.Site.Params.globalFrontmatter "description" }}
+            <meta
+                name="description"
+                content="{{ $.Site.Params.globalFrontmatter.description }}" />
+        {{ end }}
+
+        {{ if isset $.Params "keywords" }}
+            <meta name="keywords" content="{{ $.Params.keywords }}" />
+        {{ else if isset $.Site.Params.globalFrontmatter "keywords" }}
+            <meta
+                name="keywords"
+                content="{{ $.Site.Params.globalFrontmatter.keywords }}" />
+        {{ end }}
+
+        {{ if isset $.Params "author" }}
+            <meta name="author" content="{{ $.Params.author }}" />
+        {{ else if isset $.Site.Params.globalFrontmatter "author" }}
+            <meta
+                name="author"
+                content="{{ $.Site.Params.globalFrontmatter.author }}" />
+        {{ end }}
+
+    {{ else }}
+        {{ with $.Site.Params.globalFrontmatter.description }}
+            <meta name="description" content="{{ . }}" />
+        {{ end }}
+
+        {{ with $.Site.Params.globalFrontmatter.author }}
+            <meta name="author" content="{{ . }}" />
+        {{ end }}
+
+    {{ end }}
+
+
+    <title>
+        {{ if .IsHome }}
+            {{ $.Site.Params.header.title }}
+        {{ else }}
+            {{ $.Page.Title }} |
+            {{ $.Site.Params.header.title }}
+        {{ end }}
+    </title>
+
+    {{ with $.Site.Params.site.faviconUrl }}
+        <link rel="icon" href="{{ . }}" />
+    {{ end }}
+
+
+    <!-- Bundle all CSS -->
+    {{ $style := slice }}
+
+
+    <!-- Get all remore CSS -->
+    {{ $style := $style | append ( resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" ) }}
+
+
+    <!-- Get all local CSS -->
+    {{ $style := $style | append ( resources.Match "css/*.css" ) }}
+    {{/* {{ $style := $style | append ( resources.Get "css/style.css" ) }} */}}
+    {{/* resources.Match */}}
+
+
+    <!-- Get all custom css -->
+    {{ with $.Site.Params.globalFrontmatter.externalcss }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalcss }}
+            {{ $style := $style | append ( resources.GetRemote $css_src  ) }}
+        {{ end }}
+    {{ end }}
+
+    {{ with $.Site.Params.globalFrontmatter.localCss }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.localCss }}
+            {{ $style := $style | append ( resources.Get $css_src  ) }}
+        {{ end }}
+    {{ end }}
+
+    {{ if hugo.IsProduction }}
+
+        <!-- Concat to a single file -->
+        {{ $style := $style | resources.Concat "css/index.css" | minify | resources.Fingerprint "sha512" }}
+
+
+        <link
+            rel="stylesheet"
+            href="{{ $style.RelPermalink }}"
+            integrity="{{ $style.Data.Integrity }}" />
+    {{ else }}
+
+        {{ range $style }}
+            {{ $currentStyle := . | resources.Fingerprint "sha512" }}
+            <link
+                rel="stylesheet"
+                href="{{ $currentStyle.RelPermalink }}"
+                integrity="{{ $currentStyle.Data.Integrity }}" />
+        {{ end }}
+
+    {{ end }}
+
+</head>
