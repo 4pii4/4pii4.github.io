@@ -98,14 +98,6 @@ article.main > div.content li {
 }
 
 /**************
-     Image
-***************/
-article.main > div.content img {
-    height: auto;
-    width: 100%;
-}
-
-/**************
      Font
 ***************/
 article.main > div.content em {
