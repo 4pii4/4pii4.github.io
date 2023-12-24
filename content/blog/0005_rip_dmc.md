@@ -44,10 +44,12 @@ ec57c7024d96e2aaac1cf565af4cac7be1048abc053fc4777e00335cb51a43481c517c902d3ea98a
 
 <br>
 <details>
-<summary>don't open</summary>
+<summary>qua khu kia cua urashi</summary>
 
 ![k](https://chocopie.shx.gg/6nmjhswAt.png)
 ![k](https://chocopie.shx.gg/6nmjhswAu.png)
+![k](https://chocopie.shx.gg/6nnB7VkWT.png)
+![k](https://chocopie.shx.gg/6nnB7EzaD.png)
 
 </details>
 
