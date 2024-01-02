@@ -12,7 +12,7 @@ theme = 'dark-theme-editor'
         externalCss = []
         localJs = []
         externalJs = []
-        faviconUrl = "https://raw.githubusercontent.com/4pii4/random_files/main/favicon.png"
+        faviconUrl = "https://avatars.githubusercontent.com/u/138131197?s=128&v=4"
 
     [params.header]
         title = "pieland"
