@@ -1,4 +1,4 @@
-baseURL = 'https://pie.is-a.dev/'
+baseURL = 'https://browser.consoles.works/'
 languageCode = 'en-us'
 title = "pie's personal website"
 theme = 'dark-theme-editor'
