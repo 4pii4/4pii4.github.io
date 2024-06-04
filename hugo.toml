@@ -1,4 +1,4 @@
-baseURL = 'https://browser.consoles.works/'
+baseURL = 'https://blog.pieland.xyz/'
 languageCode = 'en-us'
 title = "pie's personal website"
 theme = 'dark-theme-editor'
